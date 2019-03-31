@@ -21,7 +21,7 @@ def gettable():
             cur.execute(f.read())
         conn.commit()
 
-        for table in cur.fetchall():
+        for table in cur.fetchone():
             print(table)
 
     except (Exception, psycopg2.DatabaseError) as error:
