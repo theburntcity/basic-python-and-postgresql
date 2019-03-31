@@ -21,6 +21,8 @@ def gettable():
             cur.execute(f.read())
         conn.commit()
 
+        # since there is only table in the database fetchone() method is used. If there
+        # more than one table, then use fetchall() method.
         for table in cur.fetchone():
             print(table)
 
